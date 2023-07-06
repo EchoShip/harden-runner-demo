@@ -1,0 +1,79 @@
+name: Node Build Test Release 
+on:
+  [workflow_dispatch]
+   
+jobs:
+  build:
+    name: Build
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest] # ubuntu-22.04
+    steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  unittests:
+    name: Unit-Tests
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest] # ubuntu-22.04
+    steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  loadtest:
+    name: Load-Test
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest] # ubuntu-22.04
+    steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  release:
+    name: Release
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest] # ubuntu-22.04
+    steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+  releaseverification:
+    name: Release-Verification
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest] # ubuntu-22.04
+    steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v2
