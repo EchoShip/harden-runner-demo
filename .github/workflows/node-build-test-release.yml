@@ -16,7 +16,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
   unittests:
     name: Unit-Tests
@@ -31,7 +31,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
   loadtest:
     name: Load-Test
@@ -46,7 +46,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
   release:
     name: Release
@@ -61,7 +61,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
   releaseverification:
     name: Release-Verification
@@ -76,4 +76,4 @@ jobs:
           egress-policy: audit
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
